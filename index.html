@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Isanzu Train Schedule</title>
+	<script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
+	<!--Bootswatch link-->
+	<link rel="stylesheet" type="text/css" href="https://bootswatch.com/4/slate/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron text-center">
+            <h1 class="display-4 text-white">Catch Me If you Can Train!</h1>
+            <h2 class="text-white">..or else, Bye!</h2>
+        </div>
+        <h3>Current Train Schedule</h3>
+
+      <div class="container">
+            <div class="row">
+                <div class="panel-body">
+                        <table class="train-schedule">
+                             <tr>
+                                  <th class="col-xs-3">Train Name
+                                  </th>
+                                  <th class="col-xs-2">Destination
+                                  </th>
+                                  <th class="col-xs-2">Frequency (min)
+                                  </th>
+                                  <th class="col-xs-2">Next Arrival
+                                  </th>
+                                  <th class="col-xs-2">Minutes Away
+                                  </th>
+                             </tr>
+                        </table>
+                     </div>
+                   </div>
+                </div>
+             </div> 
+
+	<!--JQuery link-->
+	 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	 <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+	<script type="text/javascript" src="/javascript/train.js"></script>
+</body>
+</html>

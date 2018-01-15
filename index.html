@@ -2,42 +2,64 @@
 <html>
 <head>
 	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Isanzu Train Schedule</title>
-	<script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
 	<!--Bootswatch link-->
 	<link rel="stylesheet" type="text/css" href="https://bootswatch.com/4/slate/bootstrap.min.css">
 </head>
 <body>
     <div class="container">
         <div class="jumbotron text-center">
-            <h1 class="display-4 text-white">Catch Me If you Can Train!</h1>
-            <h2 class="text-white">..or else, Bye!</h2>
+            <h1 class="display-3 text-white">Isanzu Train Schedule!</h1>
+            <h2 class="text-white">Catch me if you can. Otherwise, Bye!</h2>
         </div>
-        <h3>Current Train Schedule</h3>
-
-      <div class="container">
-            <div class="row">
-                <div class="panel-body">
-                        <table class="train-schedule">
-                             <tr>
-                                  <th class="col-xs-3">Train Name
-                                  </th>
-                                  <th class="col-xs-2">Destination
-                                  </th>
-                                  <th class="col-xs-2">Frequency (min)
-                                  </th>
-                                  <th class="col-xs-2">Next Arrival
-                                  </th>
-                                  <th class="col-xs-2">Minutes Away
-                                  </th>
-                             </tr>
-                        </table>
-                     </div>
-                   </div>
-                </div>
-             </div> 
-
-	<!--JQuery link-->
+    </div>
+      <h3>Current Train Schedule</h3>
+      <div class="panel-body">
+          <table class="table table-hover" id='trainTable'>
+            <thead>
+              <tr>
+                <th>Train Name</th>
+                <th>Destination</th>
+                <th>Frequency (min)</th>
+                <th>Next Arrival</th>
+                <th>Minutes Away</th>
+              </tr>
+            </thead>
+          </table>
+      </div>
+     <!-- panel for adding train info and panel for destination -->
+  <div class="col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
+      <div class="panel panel-primary">
+                 <div class="panel-heading">
+                     <h3 class="panel-title">Add Train</h3>
+                  </div>
+     <div class="panel-body">
+          <form role="form">
+              <div class="form-group">
+                  <label for="text">Train Name</label>
+                   <input type="text" class="form-control" id="name-input">
+              </div>
+              <div class="form-group">
+                    <label for="text">Destination</label>
+                    <input type="text" class="form-control" id="destination-input">
+              </div>
+              <div class="form-group">
+                    <label for="text">First Train Time (HH:mm - military time)</label>
+                    <input type="text" class="form-control" id="first-train-time-input">
+             </div>
+              <div class="form-group">
+                   <label for="comment">Frequency (min)</label>
+                   <input type="text" class="form-control" id="frequency-input">
+              </div>
+                   <button type="submit" class="btn btn-primary" id="add-train">Submit</button>
+              </form>
+        </div> 
+      </div> 
+  </div>   
+	<!-- -JQuery link -->
 	 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	 <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 	<script type="text/javascript" src="/javascript/train.js"></script>
